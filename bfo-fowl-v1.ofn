@@ -611,7 +611,7 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000016 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000016 "disposition"@en)
 AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000016 " (forall (x) (if (\"realizable entity\" x) (exists (y) (and (\"material entity\" y) (\"specifically depends on\" x y)))))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000016 " (forall (x) (if (disposition x) (and (\"realizable entity\" x) (exists (y) (and (\"material entity\" y) (\"bearer of\" x y))))))")
+AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000016 " (forall (x) (if (disposition x) (and (\"realizable entity\" x) (exists (y) (and (\"material entity\" y) (\"bearer of\" y x))))))")
 SubClassOf(obo:BFO_0000016 obo:BFO_0000017)
 DisjointClasses(obo:BFO_0000016 obo:BFO_0000023)
 
