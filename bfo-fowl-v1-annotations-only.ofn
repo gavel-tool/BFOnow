@@ -9,7 +9,7 @@ Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
-Prefix(bfo-2-0-clif-annotations-module:=<https://github.com/gavel-tool/python-gavel-owl/>)
+Prefix(bfo-2-0-clif-annotations-module:=<https://github.com/gavel-tool/BFOnow/blob/main/bfo-fowl-v1-annotations-only.ofn#>)
 
 
 Ontology(<http://github.com/gavel-tool/python-gavel-owl/bfo-fowl-module.owl>
