@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/bfo.owl#>)
+Prefix(:=<http://github.com/gavel-tool//>)
 Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -8,11 +8,11 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
-Prefix(python-gavel-owl:=<https://github.com/gavel-tool/python-gavel-owl/>)
+Prefix(fowl:=<http://github.com/gavel-tool/>)
 
 
-Ontology(<http://purl.obolibrary.org/obo/bfo.owl>
-<http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl>
+Ontology(<http://github.com/gavel-tool/BFOnow/blob/main/bfo-fowl.ofn#>
+<http://github.com/gavel-tool/BFOnow/blob/main/bfo-fowl.ofn#>
 Annotation(obo:IAO_0000116 "BFO 2 Reference: BFO does not claim to be a complete coverage of all entities. It seeks only to provide coverage of those entities studied by empirical science together with those entities which affect or are involved in human activities such as data processing and planning – coverage that is sufficiently broad to provide assistance to those engaged in building domain ontologies for purposes of data annotation [17")
 Annotation(obo:IAO_0000116 "BFO 2 Reference: BFO’s treatment of continuants and occurrents – as also its treatment of regions, rests on a dichotomy between space and time, and on the view that there are two perspectives on reality – earlier called the ‘SNAP’ and ‘SPAN’ perspectives, both of which are essential to the non-reductionist representation of reality as we understand it from the best available science [30")
 Annotation(obo:IAO_0000116 "BFO 2 Reference: For both terms and relational expressions in BFO, we distinguish between primitive and defined. ‘Entity’ is an example of one such primitive term. Primitive terms in a highest-level ontology such as BFO are terms that are so basic to our understanding of reality that there is no way of defining them in a non-circular fashion. For these, therefore, we can provide only elucidations, supplemented by examples and by axioms.")
@@ -119,7 +119,7 @@ Declaration(ObjectProperty(obo:RO_0000086))
 Declaration(ObjectProperty(obo:RO_0001025))
 Declaration(ObjectProperty(obo:RO_0002350))
 Declaration(ObjectProperty(obo:RO_0002351))
-Declaration(ObjectProperty(python-gavel-owl:process_profile_of))
+Declaration(ObjectProperty(fowl:process_profile_of))
 Declaration(AnnotationProperty(obo:BFO_0000179))
 Declaration(AnnotationProperty(obo:BFO_0000180))
 Declaration(AnnotationProperty(obo:IAO_0000111))
@@ -149,8 +149,8 @@ Declaration(AnnotationProperty(skos:prefLabel))
 Declaration(AnnotationProperty(skos:scopeNote))
 Declaration(AnnotationProperty(foaf:homepage))
 Declaration(AnnotationProperty(foaf:mbox))
-Declaration(AnnotationProperty(python-gavel-owl:a))
-Declaration(AnnotationProperty(python-gavel-owl:clif-annotation))
+Declaration(AnnotationProperty(fowl:a))
+Declaration(AnnotationProperty(fowl:clif-annotation))
 Declaration(Datatype(xsd:string))
 ############################
 #   Annotation Properties
@@ -231,14 +231,14 @@ AnnotationAssertion(rdfs:label obo:IAO_0000601 "has associated axiom(nl)"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0010000 obo:iao.owl)
 AnnotationAssertion(rdfs:label obo:IAO_0010000 "has axiom label"@en)
 
-# Annotation Property: python-gavel-owl:a (a)
+# Annotation Property: fowl:a (a)
 
-AnnotationAssertion(rdfs:comment python-gavel-owl:a "'a' appears as a name in some CLIF annotations. The annotation property 'a' is used to bring a into the ontology's OWL signature so it can be matched with the CLIF name automatically.")
-AnnotationAssertion(rdfs:label python-gavel-owl:a "a")
+AnnotationAssertion(rdfs:comment fowl:a "'a' appears as a name in some CLIF annotations. The annotation property 'a' is used to bring a into the ontology's OWL signature so it can be matched with the CLIF name automatically.")
+AnnotationAssertion(rdfs:label fowl:a "a")
 
-# Annotation Property: python-gavel-owl:clif-annotation (clif annotation)
+# Annotation Property: fowl:clif-annotation (clif annotation)
 
-AnnotationAssertion(rdfs:label python-gavel-owl:clif-annotation "clif annotation")
+AnnotationAssertion(rdfs:label fowl:clif-annotation "clif annotation")
 
 
 ############################
@@ -425,9 +425,9 @@ AnnotationAssertion(rdfs:label obo:RO_0002350 "member of"@en)
 SubObjectPropertyOf(obo:RO_0002350 obo:BFO_0000050)
 InverseObjectProperties(obo:RO_0002350 obo:RO_0002351)
 
-# Object Property: python-gavel-owl:process_profile_of (process profile of)
+# Object Property: fowl:process_profile_of (process profile of)
 
-AnnotationAssertion(rdfs:label python-gavel-owl:process_profile_of "process profile of")
+AnnotationAssertion(rdfs:label fowl:process_profile_of "process profile of")
 
 
 
@@ -461,9 +461,9 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/011-002>) obo:IAO_0000601 obo:BFO_0000002 "if b is a material entity, then there is some temporal interval (referred to below as a one-dimensional temporal region) during which b exists. (axiom label in BFO2 Reference: [011-002])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000002 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000002 "continuant"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000002 " (forall (x y) (if (and (continuant x) (\"part of\" y x)) (continuant y)))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000002 " (forall (x) (if (\"material entity\" x) (exists (t) (and (\"temporal region\" t) (\"exists at\" x t)))))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000002 " (forall (x) (if (continuant x) (entity x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000002 " (forall (x y) (if (and (continuant x) (\"part of\" y x)) (continuant y)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000002 " (forall (x) (if (\"material entity\" x) (exists (t) (and (\"temporal region\" t) (\"exists at\" x t)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000002 " (forall (x) (if (continuant x) (entity x)))")
 SubClassOf(obo:BFO_0000002 obo:BFO_0000001)
 DisjointClasses(obo:BFO_0000002 obo:BFO_0000003)
 
@@ -480,8 +480,8 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/079-001>) obo:IAO_0000601 obo:BFO_0000003 "b is an occurrent entity iff b is an entity that has temporal parts. (axiom label in BFO2 Reference: [079-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000003 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000003 "occurrent"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000003 " (forall (x) (if (occurrent x) (exists (r) (and (\"spatiotemporal region\" r) (\"occupies spatiotemporal region\" x r)))))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000003 " (forall (x) (iff (occurrent x) (and (entity x) (exists (y) (\"temporal part of\" y x)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000003 " (forall (x) (if (occurrent x) (exists (r) (and (\"spatiotemporal region\" r) (\"occupies spatiotemporal region\" x r)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000003 " (forall (x) (iff (occurrent x) (and (entity x) (exists (y) (\"temporal part of\" y x)))))")
 SubClassOf(obo:BFO_0000003 obo:BFO_0000001)
 
 # Class: obo:BFO_0000004 (independent continuant)
@@ -503,9 +503,9 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/018-002>) obo:IAO_0000601 obo:BFO_0000004 "For every independent continuant b and time t during the region of time spanned by its life, there are entities which s-depends_on b during t. (axiom label in BFO2 Reference: [018-002])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000004 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000004 "independent continuant"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000004 " (forall (x) (if (\"independent continuant\" x) (exists (r) (and (\"spatial region\" r) (\"located in\" x r)))))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000004 " (forall (x) (if (\"independent continuant\" x) (exists (y) (and (entity y) (\"specifically depends on\" y x)))))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000004 " (iff (\"independent continuant\" a) (and (continuant a) (not (exists (b) (\"specifically depends on\" a b)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000004 " (forall (x) (if (\"independent continuant\" x) (exists (r) (and (\"spatial region\" r) (\"located in\" x r)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000004 " (forall (x) (if (\"independent continuant\" x) (exists (y) (and (entity y) (\"specifically depends on\" y x)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000004 " (iff (\"independent continuant\" a) (and (continuant a) (not (exists (b) (\"specifically depends on\" a b)))))")
 SubClassOf(obo:BFO_0000004 obo:BFO_0000002)
 DisjointClasses(obo:BFO_0000004 obo:BFO_0000020)
 DisjointClasses(obo:BFO_0000004 obo:BFO_0000031)
@@ -520,8 +520,8 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/036-001>) obo:IAO_0000601 obo:BFO_0000006 "All continuant parts of spatial regions are spatial regions. (axiom label in BFO2 Reference: [036-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000006 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000006 "spatial region"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000006 " (forall (x y) (if (and (\"spatial region\" x) (\"part of\" y x)) (\"spatial region\" y)))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000006 " (forall (x) (if (\"spatial region\" x) (continuant x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000006 " (forall (x y) (if (and (\"spatial region\" x) (\"part of\" y x)) (\"spatial region\" y)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000006 " (forall (x) (if (\"spatial region\" x) (continuant x)))")
 SubClassOf(obo:BFO_0000006 obo:BFO_0000141)
 DisjointClasses(obo:BFO_0000006 obo:BFO_0000029)
 DisjointClasses(obo:BFO_0000006 obo:BFO_0000140)
@@ -536,9 +536,9 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/119-002>) obo:IAO_0000601 obo:BFO_0000008 "Every temporal region t is such that t occupies_temporal_region t. (axiom label in BFO2 Reference: [119-002])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000008 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000008 "temporal region"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000008 " (forall (r) (if (\"temporal region\" r) (\"occupies temporal region\" r r)))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000008 " (forall (x y) (if (and (\"temporal region\" x) (\"part of\" y x)) (\"temporal region\" y)))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000008 " (forall (x) (if (\"temporal region\" x) (occurrent x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000008 " (forall (r) (if (\"temporal region\" r) (\"occupies temporal region\" r r)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000008 " (forall (x y) (if (and (\"temporal region\" x) (\"part of\" y x)) (\"temporal region\" y)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000008 " (forall (x) (if (\"temporal region\" x) (occurrent x)))")
 SubClassOf(obo:BFO_0000008 obo:BFO_0000003)
 DisjointClasses(obo:BFO_0000008 obo:BFO_0000011)
 DisjointClasses(obo:BFO_0000008 obo:BFO_0000015)
@@ -553,7 +553,7 @@ AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000009 "the surface of a sphere-sha
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/039-001>) obo:IAO_0000600 obo:BFO_0000009 "A two-dimensional spatial region is a spatial region that is of two dimensions. (axiom label in BFO2 Reference: [039-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000009 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000009 "two-dimensional spatial region"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000009 " (forall (x) (if (\"two-dimensional spatial region\" x) (\"spatial region\" x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000009 " (forall (x) (if (\"two-dimensional spatial region\" x) (\"spatial region\" x)))")
 SubClassOf(obo:BFO_0000009 obo:BFO_0000006)
 DisjointClasses(obo:BFO_0000009 obo:BFO_0000028)
 
@@ -572,11 +572,11 @@ AnnotationAssertion(obo:IAO_0000601 obo:BFO_0000011 "Every spatiotemporal region
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/107-002>) obo:IAO_0000601 obo:BFO_0000011 "Every spatiotemporal region s is such that s occupies_spatiotemporal_region s. (axiom label in BFO2 Reference: [107-002])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000011 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000011 "spatiotemporal region"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000011 " (forall (r) (if (\"spatiotemporal region\" r) (\"occupies spatiotemporal region\" r r)))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000011 " (forall (x y) (if (and (\"spatiotemporal region\" x) (\"part of\" y x)) (\"spatiotemporal region\" y)))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000011 " (forall (x) (if (\"spatiotemporal region\" x) (exists (y) (and (\"spatial region\" y) (\"spatially projects onto\" x y)))))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000011 " (forall (x) (if (\"spatiotemporal region\" x) (exists (y) (and (\"temporal region\" y) (\"temporally projects onto\" x y)))))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000011 " (forall (x) (if (\"spatiotemporal region\" x) (occurrent x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000011 " (forall (r) (if (\"spatiotemporal region\" r) (\"occupies spatiotemporal region\" r r)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000011 " (forall (x y) (if (and (\"spatiotemporal region\" x) (\"part of\" y x)) (\"spatiotemporal region\" y)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000011 " (forall (x) (if (\"spatiotemporal region\" x) (exists (y) (and (\"spatial region\" y) (\"spatially projects onto\" x y)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000011 " (forall (x) (if (\"spatiotemporal region\" x) (exists (y) (and (\"temporal region\" y) (\"temporally projects onto\" x y)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000011 " (forall (x) (if (\"spatiotemporal region\" x) (occurrent x)))")
 SubClassOf(obo:BFO_0000011 obo:BFO_0000003)
 
 # Class: obo:BFO_0000015 (process)
@@ -594,7 +594,7 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000015 "BFO 2 Reference: The realm of occurrents is less pervasively marked by the presence of natural units than is the case in the realm of independent continuants. Thus there is here no counterpart of ‘object’. In BFO 1.0 ‘process’ served as such a counterpart. In BFO 2.0 ‘process’ is, rather, the occurrent counterpart of ‘material entity’. Those natural – as contrasted with engineered, which here means: deliberately executed – units which do exist in the realm of occurrents are typically either parasitic on the existence of natural units on the continuant side, or they are fiat in nature. Thus we can count lives; we can count football games; we can count chemical reactions performed in experiments or in chemical manufacturing. We cannot count the processes taking place, for instance, in an episode of insect mating behavior.Even where natural units are identifiable, for example cycles in a cyclical process such as the beating of a heart or an organism’s sleep/wake cycle, the processes in question form a sequence with no discontinuities (temporal gaps) of the sort that we find for instance where billiard balls or zebrafish or planets are separated by clear spatial gaps. Lives of organisms are process units, but they too unfold in a continuous series from other, prior processes such as fertilization, and they unfold in turn in continuous series of post-life processes such as post-mortem decay. Clear examples of boundaries of processes are almost always of the fiat sort (midnight, a time of death as declared in an operating theater or on a death certificate, the initiation of a state of war)"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000015 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000015 "process"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000015 " (iff (\"process\" a) (and (occurrent a) (exists (b) (\"proper temporal part of\" b a)) (exists (c) (and (\"material entity\" c) (\"specifically depends on\" a c)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000015 " (iff (\"process\" a) (and (occurrent a) (exists (b) (\"proper temporal part of\" b a)) (exists (c) (and (\"material entity\" c) (\"specifically depends on\" a c)))))")
 SubClassOf(obo:BFO_0000015 obo:BFO_0000003)
 
 # Class: obo:BFO_0000016 (disposition)
@@ -610,8 +610,8 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/063-002>) obo:IAO_0000601 obo:BFO_0000016 "If b is a realizable entity then for all t at which b exists, b s-depends_on some material entity at t. (axiom label in BFO2 Reference: [063-002])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000016 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000016 "disposition"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000016 " (forall (x) (if (\"realizable entity\" x) (exists (y) (and (\"material entity\" y) (\"specifically depends on\" x y)))))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000016 " (forall (x) (if (disposition x) (and (\"realizable entity\" x) (exists (y) (and (\"material entity\" y) (\"bearer of\" y x))))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000016 " (forall (x) (if (\"realizable entity\" x) (exists (y) (and (\"material entity\" y) (\"specifically depends on\" x y)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000016 " (forall (x) (if (disposition x) (and (\"realizable entity\" x) (exists (y) (and (\"material entity\" y) (\"bearer of\" y x))))))")
 SubClassOf(obo:BFO_0000016 obo:BFO_0000017)
 DisjointClasses(obo:BFO_0000016 obo:BFO_0000023)
 
@@ -628,8 +628,8 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/060-002>) obo:IAO_0000601 obo:BFO_0000017 "All realizable dependent continuants have independent continuants that are not spatial regions as their bearers. (axiom label in BFO2 Reference: [060-002])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000017 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000017 "realizable entity"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000017 " (forall (x) (if (\"realizable entity\" x) (and (\"specifically dependent continuant\" x) (exists (y) (and (\"independent continuant\" y) (not (\"spatial region\" y)) (\"inheres in\" x y))))))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000017 " (forall (x) (if (\"realizable entity\" x) (exists (y) (and (\"independent continuant\" y) (not (\"spatial region\" y)) (\"bearer of\" y x)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000017 " (forall (x) (if (\"realizable entity\" x) (and (\"specifically dependent continuant\" x) (exists (y) (and (\"independent continuant\" y) (not (\"spatial region\" y)) (\"inheres in\" x y))))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000017 " (forall (x) (if (\"realizable entity\" x) (exists (y) (and (\"independent continuant\" y) (not (\"spatial region\" y)) (\"bearer of\" y x)))))")
 SubClassOf(obo:BFO_0000017 obo:BFO_0000020)
 DisjointClasses(obo:BFO_0000017 obo:BFO_0000019)
 
@@ -640,7 +640,7 @@ AnnotationAssertion(obo:BFO_0000180 obo:BFO_0000018 "ZeroDimensionalSpatialRegio
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/037-001>) obo:IAO_0000600 obo:BFO_0000018 "A zero-dimensional spatial region is a point in space. (axiom label in BFO2 Reference: [037-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000018 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000018 "zero-dimensional spatial region"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000018 " (forall (x) (if (\"zero-dimensional spatial region\" x) (\"spatial region\" x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000018 " (forall (x) (if (\"zero-dimensional spatial region\" x) (\"spatial region\" x)))")
 SubClassOf(obo:BFO_0000018 obo:BFO_0000006)
 DisjointClasses(obo:BFO_0000018 obo:BFO_0000028)
 
@@ -658,8 +658,8 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/105-001>) obo:IAO_0000601 obo:BFO_0000019 "If an entity is a quality at any time that it exists, then it is a quality at every time that it exists. (axiom label in BFO2 Reference: [105-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000019 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000019 "quality"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000019 " (forall (x) (if (exists (t) (and (\"exists at\" x t) (quality x))) (forall (t_1) (if (\"exists at\" x t_1) (quality x)))))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000019 " (forall (x) (if (quality x) (\"specifically dependent continuant\" x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000019 " (forall (x) (if (exists (t) (and (\"exists at\" x t) (quality x))) (forall (t_1) (if (\"exists at\" x t_1) (quality x)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000019 " (forall (x) (if (quality x) (\"specifically dependent continuant\" x)))")
 SubClassOf(obo:BFO_0000019 obo:BFO_0000020)
 
 # Class: obo:BFO_0000020 (specifically dependent continuant)
@@ -681,7 +681,7 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/0000005>) Annotation(rdfs:comment "per discussion with Barry Smith") obo:IAO_0000116 obo:BFO_0000020 "Specifically dependent continuant doesn't have a closure axiom because the subclasses don't necessarily exhaust all possibilites. We're not sure what else will develop here, but for example there are questions such as what are promises, obligation, etc."@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000020 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000020 "specifically dependent continuant"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000020 " (iff (\"specifically dependent continuant\" a) (and (continuant a) (exists (b) (and (\"independent continuant\" b) (not (\"spatial region\" b)) (\"specifically depends on\" a b)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000020 " (iff (\"specifically dependent continuant\" a) (and (continuant a) (exists (b) (and (\"independent continuant\" b) (not (\"spatial region\" b)) (\"specifically depends on\" a b)))))")
 SubClassOf(obo:BFO_0000020 obo:BFO_0000002)
 
 # Class: obo:BFO_0000023 (role)
@@ -699,7 +699,7 @@ AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000023 "BFO 2 Reference: One major 
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/061-001>) obo:IAO_0000600 obo:BFO_0000023 "b is a role means: b is a realizable entity & b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be& b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed. (axiom label in BFO2 Reference: [061-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000023 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000023 "role"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000023 " (forall (x) (if (role x) (\"realizable entity\" x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000023 " (forall (x) (if (role x) (\"realizable entity\" x)))")
 SubClassOf(obo:BFO_0000023 obo:BFO_0000017)
 
 # Class: obo:BFO_0000024 (fiat object part)
@@ -717,7 +717,7 @@ AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000024 "BFO 2 Reference: Most examp
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/027-004>) obo:IAO_0000600 obo:BFO_0000024 "b is a fiat object part = Def. b is a material entity which is such that for all times t, if b exists at t then there is some object c such that b proper continuant_part of  c at t and c is demarcated from the remainder of c by a two-dimensional continuant fiat boundary. (axiom label in BFO2 Reference: [027-004])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000024 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000024 "fiat object part"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000024 " (forall (x) (if (\"fiat object part\" x) (and (\"material entity\" x) (exists (y) (and (object y) (\"proper part of\" x y))))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000024 " (forall (x) (if (\"fiat object part\" x) (and (\"material entity\" x) (exists (y) (and (object y) (\"proper part of\" x y))))))")
 SubClassOf(obo:BFO_0000024 obo:BFO_0000040)
 
 # Class: obo:BFO_0000026 (one-dimensional spatial region)
@@ -728,7 +728,7 @@ AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000026 "an edge of a cube-shaped po
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/038-001>) obo:IAO_0000600 obo:BFO_0000026 "A one-dimensional spatial region is a line or aggregate of lines stretching from one point in space to another. (axiom label in BFO2 Reference: [038-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000026 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000026 "one-dimensional spatial region"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000026 " (forall (x) (if (\"one-dimensional spatial region\" x) (\"spatial region\" x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000026 " (forall (x) (if (\"one-dimensional spatial region\" x) (\"spatial region\" x)))")
 SubClassOf(obo:BFO_0000026 obo:BFO_0000006)
 DisjointClasses(obo:BFO_0000026 obo:BFO_0000028)
 
@@ -756,7 +756,7 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/025-004>) obo:IAO_0000600 obo:BFO_0000027 "b is an object aggregate means: b is a material entity consisting exactly of a plurality of objects as member_parts at all times at which b exists. (axiom label in BFO2 Reference: [025-004])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000027 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000027 "object aggregate"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000027 " (forall (x) (if (\"object aggregate\" x) (and (\"material entity\" x) (exists (y z) (and (object y) (object z) (\"member of\" y x) (\"member of\" z x) (not (= y z)))) (not (exists (w) (and (\"member of\" w x) (not (object w))))))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000027 " (forall (x) (if (\"object aggregate\" x) (and (\"material entity\" x) (exists (y z) (and (object y) (object z) (\"member of\" y x) (\"member of\" z x) (not (= y z)))) (not (exists (w) (and (\"member of\" w x) (not (object w))))))))")
 SubClassOf(obo:BFO_0000027 obo:BFO_0000040)
 
 # Class: obo:BFO_0000028 (three-dimensional spatial region)
@@ -768,7 +768,7 @@ AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000028 "a sphere-shaped region of s
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/040-001>) obo:IAO_0000600 obo:BFO_0000028 "A three-dimensional spatial region is a spatial region that is of three dimensions. (axiom label in BFO2 Reference: [040-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000028 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000028 "three-dimensional spatial region"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000028 " (forall (x) (if (\"three-dimensional spatial region\" x) (\"spatial region\" x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000028 " (forall (x) (if (\"three-dimensional spatial region\" x) (\"spatial region\" x)))")
 SubClassOf(obo:BFO_0000028 obo:BFO_0000006)
 
 # Class: obo:BFO_0000029 (site)
@@ -793,7 +793,7 @@ AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000029 "your left nostril (a fiat p
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/034-002>) obo:IAO_0000600 obo:BFO_0000029 "b is a site means: b is a three-dimensional immaterial entity that is (partially or wholly) bounded by a material entity or it is a three-dimensional immaterial part thereof. (axiom label in BFO2 Reference: [034-002])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000029 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000029 "site"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000029 " (forall (x) (if (site x) (\"immaterial entity\" x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000029 " (forall (x) (if (site x) (\"immaterial entity\" x)))")
 SubClassOf(obo:BFO_0000029 obo:BFO_0000141)
 
 # Class: obo:BFO_0000030 (object)
@@ -831,7 +831,7 @@ AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000031 "the sequence of this protei
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/074-001>) obo:IAO_0000115 obo:BFO_0000031 "b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000031 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000031 "generically dependent continuant"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000031 " (iff (\"generically dependent continuant\" a) (and (continuant a) (exists (b) (\"generically depends on\" a b))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000031 " (iff (\"generically dependent continuant\" a) (and (continuant a) (exists (b) (\"generically depends on\" a b))))")
 SubClassOf(obo:BFO_0000031 obo:BFO_0000002)
 
 # Class: obo:BFO_0000034 (function)
@@ -845,7 +845,7 @@ AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000034 "BFO 2 Reference: In the pas
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/064-001>) obo:IAO_0000600 obo:BFO_0000034 "A function is a disposition that exists in virtue of the bearer’s physical make-up and this physical make-up is something the bearer possesses because it came into being, either through evolution (in the case of natural biological entities) or through intentional design (in the case of artifacts), in order to realize processes of a certain sort. (axiom label in BFO2 Reference: [064-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000034 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000034 "function"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000034 " (forall (x) (if (\"function\" x) (disposition x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000034 " (forall (x) (if (\"function\" x) (disposition x)))")
 SubClassOf(obo:BFO_0000034 obo:BFO_0000016)
 
 # Class: obo:BFO_0000035 (process boundary)
@@ -857,8 +857,8 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/085-002>) obo:IAO_0000601 obo:BFO_0000035 "Every process boundary occupies_temporal_region a zero-dimensional temporal region. (axiom label in BFO2 Reference: [085-002])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000035 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000035 "process boundary"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000035 " (forall (x) (if (\"process boundary\" x) (exists (y) (and (\"zero-dimensional temporal region\" y) (\"occupies temporal region\" x y)))))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000035 " (iff (\"process boundary\" a) (exists (p) (and (\"process\" p) (\"temporal part of\" a p) (not (exists (b) (\"proper temporal part of\" b a))))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000035 " (forall (x) (if (\"process boundary\" x) (exists (y) (and (\"zero-dimensional temporal region\" y) (\"occupies temporal region\" x y)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000035 " (iff (\"process boundary\" a) (exists (p) (and (\"process\" p) (\"temporal part of\" a p) (not (exists (b) (\"proper temporal part of\" b a))))))")
 SubClassOf(obo:BFO_0000035 obo:BFO_0000003)
 
 # Class: obo:BFO_0000038 (one-dimensional temporal region)
@@ -870,7 +870,7 @@ AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000038 "BFO 2 Reference: A temporal
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/103-001>) obo:IAO_0000600 obo:BFO_0000038 "A one-dimensional temporal region is a temporal region that is extended. (axiom label in BFO2 Reference: [103-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000038 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000038 "one-dimensional temporal region"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000038 " (forall (x) (if (\"one-dimensional temporal region\" x) (\"temporal region\" x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000038 " (forall (x) (if (\"one-dimensional temporal region\" x) (\"temporal region\" x)))")
 SubClassOf(obo:BFO_0000038 obo:BFO_0000008)
 DisjointClasses(obo:BFO_0000038 obo:BFO_0000148)
 
@@ -898,9 +898,9 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/021-002>) obo:IAO_0000601 obo:BFO_0000040 "every entity of which a material entity is continuant part is also a material entity. (axiom label in BFO2 Reference: [021-002])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000040 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000040 "material entity"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000040 " (forall (x) (if (\"material entity\" x) (\"independent continuant\" x)))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000040 " (forall (x) (if (and (entity x) (exists (y) (and (\"material entity\" y) (\"part of\" x y)))) (\"material entity\" x)))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000040 " (forall (x) (if (and (entity x) (exists (y) (and (\"material entity\" y) (\"part of\" y x)))) (\"material entity\" x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000040 " (forall (x) (if (\"material entity\" x) (\"independent continuant\" x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000040 " (forall (x) (if (and (entity x) (exists (y) (and (\"material entity\" y) (\"part of\" x y)))) (\"material entity\" x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000040 " (forall (x) (if (and (entity x) (exists (y) (and (\"material entity\" y) (\"part of\" y x)))) (\"material entity\" x)))")
 SubClassOf(obo:BFO_0000040 obo:BFO_0000004)
 DisjointClasses(obo:BFO_0000040 obo:BFO_0000141)
 
@@ -915,7 +915,7 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(obo:IAO_0000601 obo:BFO_0000140 "Every continuant fiat boundary is located at some spatial region at every time at which it exists"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000140 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000140 "continuant fiat boundary"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000140 " (iff (\"continuant fiat boundary\" a) (and (\"immaterial entity\" a) (exists (b) (and (or (\"zero-dimensional spatial region\" b) (\"one-dimensional spatial region\" b) (\"two-dimensional spatial region\" b)) (\"located in\" a b))) (not (exists (c) (and (\"spatial region\" c) (\"part of\" c a))))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000140 " (iff (\"continuant fiat boundary\" a) (and (\"immaterial entity\" a) (exists (b) (and (or (\"zero-dimensional spatial region\" b) (\"one-dimensional spatial region\" b) (\"two-dimensional spatial region\" b)) (\"located in\" a b))) (not (exists (c) (and (\"spatial region\" c) (\"part of\" c a))))))")
 SubClassOf(obo:BFO_0000140 obo:BFO_0000141)
 
 # Class: obo:BFO_0000141 (immaterial entity)
@@ -939,7 +939,7 @@ AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000142 "the median sulcus of your t
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/032-001>) obo:IAO_0000600 obo:BFO_0000142 "a one-dimensional continuant fiat boundary is a continuous fiat line whose location is defined in relation to some material entity. (axiom label in BFO2 Reference: [032-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000142 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000142 "one-dimensional continuant fiat boundary"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000142 " (iff (\"one-dimensional continuant fiat boundary\" a) (and (\"continuant fiat boundary\" a) (exists (b) (and (\"one-dimensional spatial region\" b) (\"located in\" a b)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000142 " (iff (\"one-dimensional continuant fiat boundary\" a) (and (\"continuant fiat boundary\" a) (exists (b) (and (\"one-dimensional spatial region\" b) (\"located in\" a b)))))")
 SubClassOf(obo:BFO_0000142 obo:BFO_0000140)
 DisjointClasses(obo:BFO_0000142 obo:BFO_0000146)
 DisjointClasses(obo:BFO_0000142 obo:BFO_0000147)
@@ -955,8 +955,8 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/094-005>) obo:IAO_0000600 obo:BFO_0000144 "b process_profile_of c holds when b proper_occurrent_part_of c& there is some proper_occurrent_part d of c which has no parts in common with b & is mutually dependent on b& is such that b, c and d occupy the same temporal region (axiom label in BFO2 Reference: [094-005])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000144 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000144 "process profile"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000144 " (forall (x y) (if (\"process profile of\" x y) (and (\"proper part of\" x y) (exists (z t) (and (\"proper part of\" z y) (\"temporal region\" t) (\"occupies spatiotemporal region\" x t) (\"occupies spatiotemporal region\" y t) (\"occupies spatiotemporal region\" z t) (not (exists (w) (and (\"part of\" w x) (\"part of\" w z)))))))))")
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000144 " (iff (\"process profile\" a) (exists (b) (and (\"process\" b) (\"process profile of\" a b))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000144 " (forall (x y) (if (\"process profile of\" x y) (and (\"proper part of\" x y) (exists (z t) (and (\"proper part of\" z y) (\"temporal region\" t) (\"occupies spatiotemporal region\" x t) (\"occupies spatiotemporal region\" y t) (\"occupies spatiotemporal region\" z t) (not (exists (w) (and (\"part of\" w x) (\"part of\" w z)))))))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000144 " (iff (\"process profile\" a) (exists (b) (and (\"process\" b) (\"process profile of\" a b))))")
 SubClassOf(obo:BFO_0000144 obo:BFO_0000015)
 DisjointClasses(obo:BFO_0000144 obo:BFO_0000182)
 
@@ -969,7 +969,7 @@ AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000145 "a marriage bond, an instanc
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/057-001>) obo:IAO_0000115 obo:BFO_0000145 "b is a relational quality = Def. for some independent continuants c, d and for some time t: b quality_of c at t & b quality_of d at t. (axiom label in BFO2 Reference: [057-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000145 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000145 "relational quality"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000145 " (iff (\"relational quality\" a) (exists (b c) (and (\"independent continuant\" b) (\"independent continuant\" c) (\"quality of\" a b) (\"quality of\" a c))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000145 " (iff (\"relational quality\" a) (exists (b c) (and (\"independent continuant\" b) (\"independent continuant\" c) (\"quality of\" a b) (\"quality of\" a c))))")
 SubClassOf(obo:BFO_0000145 obo:BFO_0000019)
 
 # Class: obo:BFO_0000146 (two-dimensional continuant fiat boundary)
@@ -979,7 +979,7 @@ AnnotationAssertion(obo:BFO_0000180 obo:BFO_0000146 "TwoDimensionalContinuantFia
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/033-001>) obo:IAO_0000600 obo:BFO_0000146 "a two-dimensional continuant fiat boundary (surface) is a self-connected fiat surface whose location is defined in relation to some material entity. (axiom label in BFO2 Reference: [033-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000146 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000146 "two-dimensional continuant fiat boundary"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000146 " (iff (\"two-dimensional continuant fiat boundary\" a) (and (\"continuant fiat boundary\" a) (exists (b) (and (\"two-dimensional spatial region\" b) (\"located in\" a b)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000146 " (iff (\"two-dimensional continuant fiat boundary\" a) (and (\"continuant fiat boundary\" a) (exists (b) (and (\"two-dimensional spatial region\" b) (\"located in\" a b)))))")
 SubClassOf(obo:BFO_0000146 obo:BFO_0000140)
 
 # Class: obo:BFO_0000147 (zero-dimensional continuant fiat boundary)
@@ -993,7 +993,7 @@ AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/b
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/031-001>) obo:IAO_0000600 obo:BFO_0000147 "a zero-dimensional continuant fiat boundary is a fiat point whose location is defined in relation to some material entity. (axiom label in BFO2 Reference: [031-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000147 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000147 "zero-dimensional continuant fiat boundary"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000147 " (iff (\"zero-dimensional continuant fiat boundary\" a) (and (\"continuant fiat boundary\" a) (exists (b) (and (\"zero-dimensional spatial region\" b) (\"located in\" a b)))))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000147 " (iff (\"zero-dimensional continuant fiat boundary\" a) (and (\"continuant fiat boundary\" a) (exists (b) (and (\"zero-dimensional spatial region\" b) (\"located in\" a b)))))")
 SubClassOf(obo:BFO_0000147 obo:BFO_0000140)
 
 # Class: obo:BFO_0000148 (zero-dimensional temporal region)
@@ -1009,7 +1009,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:BFO_0000148 "temporal instant."@en)
 AnnotationAssertion(Annotation(obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/102-001>) obo:IAO_0000600 obo:BFO_0000148 "A zero-dimensional temporal region is a temporal region that is without extent. (axiom label in BFO2 Reference: [102-001])"@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000148 obo:bfo.owl)
 AnnotationAssertion(rdfs:label obo:BFO_0000148 "zero-dimensional temporal region"@en)
-AnnotationAssertion(python-gavel-owl:clif-annotation obo:BFO_0000148 " (forall (x) (if (\"zero-dimensional temporal region\" x) (\"temporal region\" x)))")
+AnnotationAssertion(fowl:clif-annotation obo:BFO_0000148 " (forall (x) (if (\"zero-dimensional temporal region\" x) (\"temporal region\" x)))")
 SubClassOf(obo:BFO_0000148 obo:BFO_0000008)
 
 # Class: obo:BFO_0000182 (history)
